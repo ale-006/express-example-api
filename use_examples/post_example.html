@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Example API Use</title>
+</head>
+<script>
+    /**
+     * USE CASE:
+     * Register a new user
+    */ 
+    const xhttp = new XMLHttpRequest()
+
+    xhttp.open("POST", "http://localhost:8080/user/user4@cool.com/34251", false)
+                        //user4@cool.com = email, 34251 = password
+    xhttp.send()
+
+    const res = JSON.parse(xhttp.responseText)
+    
+    console.log(res)
+</script>
+</html>
